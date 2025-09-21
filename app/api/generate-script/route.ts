@@ -21,7 +21,7 @@ Include:
 - Call-to-action
 - SEO-optimized language
 
-Format with [TIMESTAMP] markers and [ACTION] cues for editing.`
+Format with [TIMESTAMP] markers and [ACTION] cues for editing. Provide the response in plain text format without any markdown formatting, bold text, asterisks, or special characters.`
         break
 
       case "caption":
@@ -34,7 +34,7 @@ Include:
 - Call-to-action
 - Emoji usage (if appropriate)
 
-Keep it optimized for maximum engagement and reach.`
+Keep it optimized for maximum engagement and reach. Provide the response in plain text format without any markdown formatting, bold text, asterisks, or special characters.`
         break
 
       case "description":
@@ -48,7 +48,7 @@ Include:
 - Call-to-action
 - Social media links section
 
-Make it search-friendly and viewer-focused.`
+Make it search-friendly and viewer-focused. Provide the response in plain text format without any markdown formatting, bold text, asterisks, or special characters.`
         break
 
       case "hook":
@@ -60,7 +60,7 @@ Each hook should:
 - Be specific to the topic
 - Match the tone requested
 
-Provide variety in approach (question, statement, statistic, story, etc.).`
+Provide variety in approach (question, statement, statistic, story, etc.). Provide the response in plain text format without any markdown formatting, bold text, asterisks, or special characters.`
         break
 
       case "cta":
@@ -73,7 +73,7 @@ Include CTAs for:
 - Next video/content
 - Community building
 
-Make them natural and compelling, not pushy.`
+Make them natural and compelling, not pushy. Provide the response in plain text format without any markdown formatting, bold text, asterisks, or special characters.`
         break
     }
 

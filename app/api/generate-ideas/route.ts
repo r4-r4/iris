@@ -16,7 +16,7 @@ For each idea, provide:
 3. Key talking points
 4. Why it's trending/relevant
 
-Format as a numbered list with clear sections for each idea.`
+Provide the response in plain text format without any markdown formatting, bold text, asterisks, or special characters. Use simple numbered lists and clear sections.`
 
     const result = await model.generateContent(prompt)
     const ideas = result.response.text()

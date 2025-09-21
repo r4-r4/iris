@@ -37,37 +37,39 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen gradient-bg">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 xl:px-8 xl:py-16">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
             IRIS
           </h1>
-          <p className="text-xl text-muted-foreground mb-2">AI Content Creator Assistant</p>
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl xl:text-3xl text-cyan-200 mb-2">AI Content Creator Assistant</p>
+          <p className="text-base sm:text-lg md:text-xl xl:text-2xl text-slate-300 max-w-2xl xl:max-w-4xl mx-auto">
             Empower your content creation with AI-driven insights, trending ideas, and optimization tools
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-6 md:gap-8 xl:gap-12 max-w-4xl xl:max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="group hover:scale-105 transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm"
+              className="group hover:scale-105 transition-all duration-300 border-slate-700/50 bg-slate-800/50 backdrop-blur-sm"
             >
-              <CardHeader>
+              <CardHeader className="pb-4">
                 <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-16 h-16 xl:w-20 xl:h-20 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                 >
                   {feature.icon}
                 </div>
-                <CardTitle className="text-xl">{feature.title}</CardTitle>
-                <CardDescription className="text-muted-foreground">{feature.description}</CardDescription>
+                <CardTitle className="text-lg xl:text-xl text-white">{feature.title}</CardTitle>
+                <CardDescription className="text-slate-300 text-sm xl:text-base">{feature.description}</CardDescription>
               </CardHeader>
               <CardContent>
                 <Link href={feature.href}>
-                  <Button className="w-full accent-gradient hover:opacity-90 transition-opacity">Get Started</Button>
+                  <Button className="w-full accent-gradient hover:opacity-90 transition-opacity text-white font-medium">
+                    Get Started
+                  </Button>
                 </Link>
               </CardContent>
             </Card>
@@ -75,8 +77,8 @@ export default function HomePage() {
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-16 text-muted-foreground">
-          <p>Powered by Google Gemini AI • Built for Content Creators</p>
+        <div className="text-center mt-16 text-slate-400">
+          <p className="text-sm xl:text-base">Powered by Google Gemini AI • Built for Content Creators</p>
         </div>
       </div>
     </div>

@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 import { ArrowLeft, TrendingUp, Loader2 } from "lucide-react"
+import { ExportButton } from "@/components/export-button"
 
 export default function SmartTipsPage() {
   const [challenge, setChallenge] = useState("")
@@ -129,8 +130,19 @@ export default function SmartTipsPage() {
 
             <Card className="bg-card/50 backdrop-blur-sm border-border/50">
               <CardHeader>
-                <CardTitle>Personalized Recommendations</CardTitle>
-                <CardDescription>AI-powered tips to overcome your challenges</CardDescription>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <CardTitle>Personalized Recommendations</CardTitle>
+                    <CardDescription>AI-powered tips to overcome your challenges</CardDescription>
+                  </div>
+                  {tips && (
+                    <ExportButton
+                      content={tips}
+                      filename={`smart-tips-${challenge}`}
+                      title={`Smart Tips for ${challenge}`}
+                    />
+                  )}
+                </div>
               </CardHeader>
               <CardContent>
                 {tips ? (

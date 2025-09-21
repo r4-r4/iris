@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { ArrowLeft, Video, Upload, Loader2, Play } from "lucide-react"
+import { ExportButton } from "@/components/export-button"
 
 export default function QualityAnalysisPage() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
@@ -116,8 +117,19 @@ export default function QualityAnalysisPage() {
 
             <Card className="bg-card/50 backdrop-blur-sm border-border/50">
               <CardHeader>
-                <CardTitle>Analysis Results</CardTitle>
-                <CardDescription>AI insights on your video quality</CardDescription>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <CardTitle>Analysis Results</CardTitle>
+                    <CardDescription>AI insights on your video quality</CardDescription>
+                  </div>
+                  {analysis && (
+                    <ExportButton
+                      content={analysis}
+                      filename={`video-analysis-${selectedFile?.name.replace(/\.[^/.]+$/, "") || "analysis"}`}
+                      title={`Video Quality Analysis: ${selectedFile?.name || "Video"}`}
+                    />
+                  )}
+                </div>
               </CardHeader>
               <CardContent>
                 {analysis ? (

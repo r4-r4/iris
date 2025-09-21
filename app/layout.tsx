@@ -8,6 +8,7 @@ import "./globals.css"
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains-mono",
+  weight: ["400", "500", "600", "700"],
 })
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`font-mono ${jetbrainsMono.variable} antialiased`}>
+      <body className={`${jetbrainsMono.variable} font-mono antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>

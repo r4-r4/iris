@@ -12,15 +12,15 @@ export async function POST(request: Request) {
 
 Structure your response with:
 
-1. **Problem Analysis**: Why this challenge occurs
-2. **Immediate Actions**: 3-5 quick wins they can implement today
-3. **Long-term Strategy**: Sustainable growth tactics
-4. **Content Optimization**: Specific improvements for their content type
-5. **Metrics to Track**: Key performance indicators to monitor
-6. **Tools & Resources**: Recommended tools or platforms
-7. **Timeline**: Realistic expectations for seeing results
+1. Problem Analysis: Why this challenge occurs
+2. Immediate Actions: 3-5 quick wins they can implement today
+3. Long-term Strategy: Sustainable growth tactics
+4. Content Optimization: Specific improvements for their content type
+5. Metrics to Track: Key performance indicators to monitor
+6. Tools & Resources: Recommended tools or platforms
+7. Timeline: Realistic expectations for seeing results
 
-Make recommendations specific, actionable, and tailored to their content type and current situation.`
+Make recommendations specific, actionable, and tailored to their content type and current situation. Provide the response in plain text format without any markdown formatting, bold text, asterisks, or special characters.`
 
     const result = await model.generateContent(prompt)
     const tips = result.response.text()

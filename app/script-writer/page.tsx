@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 import { ArrowLeft, FileText, Loader2 } from "lucide-react"
+import { ExportButton } from "@/components/export-button"
 
 export default function ScriptWriterPage() {
   const [topic, setTopic] = useState("")
@@ -146,8 +147,19 @@ export default function ScriptWriterPage() {
 
             <Card className="bg-card/50 backdrop-blur-sm border-border/50">
               <CardHeader>
-                <CardTitle>Generated Script</CardTitle>
-                <CardDescription>Your AI-optimized content</CardDescription>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <CardTitle>Generated Script</CardTitle>
+                    <CardDescription>Your AI-optimized content</CardDescription>
+                  </div>
+                  {script && (
+                    <ExportButton
+                      content={script}
+                      filename={`script-${topic.toLowerCase().replace(/\s+/g, "-")}`}
+                      title={`${scriptType} Script: ${topic}`}
+                    />
+                  )}
+                </div>
               </CardHeader>
               <CardContent>
                 {script ? (
