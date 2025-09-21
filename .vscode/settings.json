@@ -1,0 +1,6 @@
+{
+  "tailwindCSS.experimental.configFile": "tailwind.config.js",
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false
+}
